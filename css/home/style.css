@@ -1,0 +1,169 @@
+:root {
+    --theme-bg-color: rgba(16 18 27 / 40%);
+    --border-color: rgba(113 119 144 / 25%);
+    --theme-color: #f9fafb;
+    --inactive-color: rgb(113 119 144 / 78%);
+    --body-font: "Poppins", sans-serif;
+    --hover-menu-bg: rgba(12 15 25 / 30%);
+    --content-title-color: #999ba5;
+    --content-bg: rgb(146 151 179 / 13%);
+    --button-inactive: rgb(249 250 251 / 55%);
+    --dropdown-bg: #21242d;
+    --dropdown-hover: rgb(42 46 60);
+    --popup-bg: rgb(22 25 37);
+    --search-bg: #14162b;
+    --overlay-bg: rgba(36, 39, 59, 0.3);
+    --scrollbar-bg: rgb(1 2 3 / 40%);
+    --theme-orange-border-color: #c99556;
+    --theme-font-color: #f9fafb;
+    --theme-blue-color:#3a6df0;
+    --theme-bright-yellow: khaki;
+    
+}
+
+:root {
+    --theme-bg-color: rgba(16 18 27 / 40%);
+    --border-color: rgba(113 119 144 / 25%);
+    --theme-color: #f9fafb;
+    --inactive-color: rgb(113 119 144 / 78%);
+    --body-font: "Poppins", sans-serif;
+    --hover-menu-bg: rgba(12 15 25 / 30%);
+    --content-title-color: #999ba5;
+    --content-bg: rgb(146 151 179 / 13%);
+    --button-inactive: rgb(249 250 251 / 55%);
+    --dropdown-bg: #21242d;
+    --dropdown-hover: rgb(42 46 60);
+    --popup-bg: rgb(22 25 37);
+    --search-bg: #14162b;
+    --overlay-bg: rgba(36, 39, 59, 0.3);
+    --scrollbar-bg: rgb(1 2 3 / 40%);
+    --theme-orange-border-color: #c99556;
+    --theme-font-color: #f9fafb;
+    --theme-blue-color:#3a6df0;
+    --theme-bright-yellow: khaki;
+    
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-image: url("../../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    backdrop-filter: blur(20px);
+    color: var(--theme-font-color);
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container-fluid {
+    /* background-color: var(--theme-bg-color); */
+    /* display: flex; */
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+.navbar{
+    padding:5 !important;
+    background:var(--dropdown-bg) !important;
+}
+
+.nav-link{
+    padding:5x;
+    margin-left:2px;
+    min-width:8vw;
+    text-align:center;
+    color:white !important;
+}
+
+.nav-link:hover{
+    background-color:#4267B2;
+
+}
+
+.title-lg {
+    font-size: 24px;
+}
+
+.title-md {
+    font-size: 18px;
+}
+
+.title-sm {
+    font-size: 14px;
+}
+
+.title-ex-sm {
+    font-size: 11px;
+}
+
+
+.center-hz {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pd-5{
+    padding:5%;
+}
+.pd-3{
+    padding:3%;
+}
+.pd-1{
+    padding:1%;
+}
+
+
+.pd-lr-5{
+    padding-left:5%;
+    padding-right:5%;
+}
+.pd-lr-3{
+    padding-left:5%;
+    padding-right:5%;
+}
+.pd-lr-1{
+    padding-left:5%;
+    padding-right:5%;
+}
+
+.pd-top-5 {
+    padding-top: 5%;
+}
+
+.pd-top-3 {
+    padding-top: 3%;
+}
+
+.pd-top-2{
+    padding-top:2%;
+}
+
+.pd-top-1 {
+    padding-top: 1%;
+}
+
+.mr-top-5 {
+    margin-top: 5%;
+}
+
+.mr-top-3 {
+    margin-top: 3%;
+}
+
+.mr-top-1 {
+    margin-top: 1%;
+}
