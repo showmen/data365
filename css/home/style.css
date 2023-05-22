@@ -21,29 +21,6 @@
     
 }
 
-:root {
-    --theme-bg-color: rgba(16 18 27 / 40%);
-    --border-color: rgba(113 119 144 / 25%);
-    --theme-color: #f9fafb;
-    --inactive-color: rgb(113 119 144 / 78%);
-    --body-font: "Poppins", sans-serif;
-    --hover-menu-bg: rgba(12 15 25 / 30%);
-    --content-title-color: #999ba5;
-    --content-bg: rgb(146 151 179 / 13%);
-    --button-inactive: rgb(249 250 251 / 55%);
-    --dropdown-bg: #21242d;
-    --dropdown-hover: rgb(42 46 60);
-    --popup-bg: rgb(22 25 37);
-    --search-bg: #14162b;
-    --overlay-bg: rgba(36, 39, 59, 0.3);
-    --scrollbar-bg: rgb(1 2 3 / 40%);
-    --theme-orange-border-color: #c99556;
-    --theme-font-color: #f9fafb;
-    --theme-blue-color:#3a6df0;
-    --theme-bright-yellow: khaki;
-    
-}
-
 body::before {
     content: "";
     position: absolute;
@@ -51,7 +28,7 @@ body::before {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    /* background-color: rgba(0, 0, 0, 0.3); */
 }
 
 body {
@@ -62,8 +39,8 @@ body {
     width: 100%;
     height: 100%;
     background-position: center center;
-    backdrop-filter: blur(20px);
-    color: var(--theme-font-color);
+    /* backdrop-filter: blur(20px); */
+    /* color: var(--theme-font-color); */
     font-family: "Ubuntu", sans-serif;
 }
 
@@ -167,3 +144,56 @@ body {
 .mr-top-1 {
     margin-top: 1%;
 }
+
+
+
+
+/***********HOME********************/
+.dashboard-category{
+    /* padding:3% !important; */
+}
+
+.d-category-item{
+    border:1px soid var(--theme-orange-border-color);
+    background-color:#d19abd59;
+    color:black;
+    backdrop-filter: blur(10px);
+    padding-top:5%;
+}
+
+.d-category-item a{
+    color:black;
+}
+
+.d-category-inner{
+    margin:3%;
+    
+}
+
+.d-priority-profile{
+    border-bottom:1px solid black;
+    margin-right:10px;
+    font-size: 12px;
+}
+
+.marquee-text{
+    font-size: 12px;
+}
+
+.profile-icon{
+    font-size:100px;
+}
+
+
+/* .pink-transp-bg{
+    background-color: rgb(255 181 181 / 50%);
+}
+.blue-transp-bg{
+    background-color: rgb(181 200 255 / 50%);
+}
+.green-transp-bg{
+    background-color: rgb(199 255 181 / 50%);
+}
+.purple-transp-bg{
+    background-color: rgb(227 181 255 / 50%);
+} */
