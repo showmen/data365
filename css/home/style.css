@@ -158,7 +158,7 @@ body {
     background-color:#d19abd59;
     color:black;
     backdrop-filter: blur(10px);
-    padding-top:5%;
+    padding-top:3%;
     border:1px solid var(--dropdown-bg);
     border-top:0px !important;
 }
