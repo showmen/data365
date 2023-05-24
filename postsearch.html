@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="en"  data-bs-theme="dark">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/postsearch/style.css">
+    <title>Data 365 | Post Search</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparant ">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#"><h3 class="title-lg text-center">DATA 365</h3></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" href="postsearch.html">Post</a>
+          <a class="nav-link" href="#">Profile</a>
+          <a class="nav-link" href="#">Page</a>
+          <a class="nav-link" href="#">Groups</a>
+          <a class="nav-link" href="#">Auto Update Tasks</a>
+          </div>
+      </div>
+      </div>
+  </nav>
+    <div class="container-fluid postsearch-header-div">
+      <div class="row postsearch-header-div-row">
+        <div class="col-8">
+          <div class="row center-hz title-dark-div">
+            <p class="title-lg">Post Search</p>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="row center-hz title-dark-div postsearch-header-title-right">
+            <p class="title-lg" id="detailHeader">Description Panel</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid postsearch-content-div">
+      <div class="row">
+        <div class="col-8 postsearch-left-panel">
+          <div class="container-fluid">
+            <!-- <div class="row">
+              <h3 class="title-lg text-center pd-top-1">Post Search</h3>
+            </div> -->
+            <div class="row">
+              <div class="accordion apps-card" id="accordionExample">
+                <div class="accordion-item app-card">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Data Collection & Auto Update Task
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div class="row">
+                        <h3 class="title-md text-left">Select Parameters</h3>
+                      </div>
+                      <!-- Parameters row 1 -->
+                      <div class="row pd-top-1">
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Max Posts : <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Location Id : <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Author ID: <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> From Date : <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> To Date  : <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Load Comments : <input class="input-sm" type="text" name=""></p>
+                        </div>
+                      </div>
+                      <!-- Parameters row 2 -->
+                      <div class="row">
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Max Comments : <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Comments Type: <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Load Replies: <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Load Reactors : <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Max Reactors  : <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Load Shares : <input class="input-sm" type="text" name=""></p>
+                        </div>
+                      </div>
+                      <!-- Parameters row 3 -->
+                      <div class="row">
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Max Shares : <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-ex-sm"><input type="checkbox" name=""> Search Request: <input class="input-sm" type="text" name=""></p>
+                        </div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                        <div class="col"></div>
+                      </div>
+                      <!-- Parameters row 4 -->
+                      <div class="row">
+                        <div class="col-6"><hr></div>
+                        <div class="col">
+                          <p class=" title-sm"><button class="content-button status-button open"><i class="bi bi-cloud-arrow-down"></i> &nbsp;&nbsp;Collect Now</button></p>
+                        </div>
+                        <div class="col">
+                          <p class=" title-sm"><button class="content-button status-button open"><i class="bi bi-arrow-clockwise"></i> &nbsp;&nbsp; Auto Update</button></p>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row keyword-search-container">
+              <div class="row pd-lr-3 mr-top-3 center-hz title-dark-div">
+                <h3 class="title-lg text-center">Keyword Search</h3>
+              </div>
+              <div class="row pd-lr-3 pd-top-1">
+                <h3 class="title-md text-left">Select Parameters</h3>
+              </div>
+              <!-- Keyword Search Parameters row 1 -->
+              <div class="row pd-lr-3 pd-top-1">
+                <div class="col">
+                  <p class=" title-ex-sm"><input type="checkbox" checked name=""> Max Page Size : <input class="input-sm" type="text" value="50" name=""></p>
+                </div>
+                <div class="col">
+                  <p class=" title-ex-sm"><input type="checkbox" checked name=""> Order by: <input class="input-sm" type="text" value="date_desc" name=""></p>
+                </div>
+                <div class="col">
+                  <p class=" title-ex-sm"><input type="checkbox" name=""> Location ID: <input class="input-sm" type="text" name=""></p>
+                </div>
+                <div class="col">
+                  <p class=" title-ex-sm"><input type="checkbox" name=""> Author ID: <input class="input-sm" type="text" name=""></p>
+                </div>
+                <div class="col">
+                  <p class=" title-ex-sm"><input type="checkbox" name=""> From Date : <input class="input-sm" type="text" name=""></p>
+                </div>
+                <div class="col">
+                  <p class=" title-ex-sm"><input type="checkbox" name=""> To Date  : <input class="input-sm" type="text" name=""></p>
+                </div>
+              </div>
+              <!-- Keyword Search Parameters row 2 -->
+              <div class="row pd-lr-3">
+                <div class="col">
+                  <p class=" title-ex-sm"><input type="checkbox" name=""> Language : <input class="input-sm" type="text" name=""></p>
+                </div>
+                <div class="col">
+                  <p class=" title-ex-sm"><input type="checkbox" name=""> Query: <input class="input-sm" type="text" name=""></p>
+                </div>
+                <div class="col-4">
+                  <p class=" title-ex-sm"><input type="checkbox" checked name=""> Owner Types: <input class="input-md" type="text" value="user,page,group" name=""></p>
+                </div>
+                <div class="col">
+                </div>
+                <div class="col">
+                </div>
+              </div>
+              <div class="row pd-top-1">
+                <div class="col-6 center-hz">
+                  <div class="search-bar input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Keyword" aria-label="Keyword" aria-describedby="basic-addon1"><button class="status-button search">Search</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid mr-top-1 keyword-search-container">
+            <div class="row">
+              <div class="col-12"><p class="title-md text-center title-container">Posts Search Results</p></div>
+              <!-- <div class="col-4"><p class="title-md text-center title-container-right">Details</p></div> -->
+            </div>
+            <div class="row">
+              <div class="col-12 tab-list-container-col">
+                <!-- <div class="row pd-top-3"><p class="title-md text-center title-container">Posts Search Results</p></div> -->
+                <div class="row pd-top-1">
+                    <div class="col">
+                      <div class="app-card"> 
+                        <div class="row pd-top-3">
+                          <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-top">Abdullah Al Jaki </span></div>
+                          <div class="col text-right"><span class="post-status-text">Posted : 9m ago</span></div>
+                        </div>
+                        <div class="app-card__subtext">  
+                        <p>বিদ্যানন্দ - Bidyanondo ফাউন্ডেশনের একজন ক্ষুদ্র ডোনেটর হিসেবে ২০২০ থেকে ২০২২ সেশনের স্বাধীন অডিট রিপোর্ট এবং প্রজেক্ট প্রোফাইল আমার কাছে আছে।
+                          শুধু আমার কাছে না, যারা বিদ্যানন্দে দান করেন এবং করেছেন...</p>
+                          <p class="text-right title-ex-sm">Posted on 05-May-2023 03:36 P.M.</p>
+                      </div>
+                      <p class="text-center">
+                        <span class="post-status-text total-reactions-span">Total Reactions = 311</span>
+                      </p>
+                      <p class="text-center">
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-hand-thumbs-up-fill"></i>668</button>
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-heart-fill"></i>1.3k</button>  
+                        <button class="status-button open" onclick="reloadDiv('postComments')"><i class="bi bi-chat-left-dots-fill"></i>78</button>  
+                        <button class="status-button open" onclick="reloadDiv('postShared')"><i class="bi bi-share-fill"></i>3</button>
+                      </p>
+                      <p class="text-center">
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-angry-fill"></i>45</button> 
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-laughing-fill"></i>88</button> 
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-frown-fill"></i>23</button> 
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-dizzy-fill"></i>30</button> 
+                      </p>
+                        <div class="app-card-buttons center-hz">
+                          <button class="status-button open"  onclick="reloadDiv('detailContent')">View Details</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="app-card"> 
+                        <div class="row pd-top-3">
+                          <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-top">Abdullah Al Jaki </span></div>
+                          <div class="col text-right"><span class="post-status-text">Posted : 9m ago</span></div>
+                        </div>
+                        <div class="app-card__subtext">  
+                        <p>বিদ্যানন্দ - Bidyanondo ফাউন্ডেশনের একজন ক্ষুদ্র ডোনেটর হিসেবে ২০২০ থেকে ২০২২ সেশনের স্বাধীন অডিট রিপোর্ট এবং প্রজেক্ট প্রোফাইল আমার কাছে আছে।
+                          শুধু আমার কাছে না, যারা বিদ্যানন্দে দান করেন এবং করেছেন...</p>
+                          <p class="text-right title-ex-sm">Posted on 05-May-2023 03:36 P.M.</p>
+                      </div>
+                      <p class="text-center">
+                        <span class="post-status-text total-reactions-span">Total Reactions = 311</span>
+                      </p>
+                      <p class="text-center">
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-hand-thumbs-up-fill"></i>668</button>
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-heart-fill"></i>1.3k</button>  
+                        <button class="status-button open" onclick="reloadDiv('postComments')"><i class="bi bi-chat-left-dots-fill"></i>78</button>  
+                        <button class="status-button open" onclick="reloadDiv('postShared')"><i class="bi bi-share-fill"></i>3</button>
+                      </p>
+                      <p class="text-center">
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-angry-fill"></i>45</button> 
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-laughing-fill"></i>88</button> 
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-frown-fill"></i>23</button> 
+                        <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-dizzy-fill"></i>30</button> 
+                      </p>
+                        <div class="app-card-buttons center-hz">
+                          <button class="status-button open"  onclick="reloadDiv('detailContent')">View Details</button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row pd-top-1">
+                  <div class="col">
+                    <div class="app-card"> 
+                      <div class="row pd-top-3">
+                        <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-top">Abdullah Al Jaki </span></div>
+                        <div class="col text-right"><span class="post-status-text">Posted : 9m ago</span></div>
+                      </div>
+                      <div class="app-card__subtext">  
+                      <p>বিদ্যানন্দ - Bidyanondo ফাউন্ডেশনের একজন ক্ষুদ্র ডোনেটর হিসেবে ২০২০ থেকে ২০২২ সেশনের স্বাধীন অডিট রিপোর্ট এবং প্রজেক্ট প্রোফাইল আমার কাছে আছে।
+                        শুধু আমার কাছে না, যারা বিদ্যানন্দে দান করেন এবং করেছেন...</p>
+                        <p class="text-right title-ex-sm">Posted on 05-May-2023 03:36 P.M.</p>
+                    </div>
+                    <p class="text-center">
+                      <span class="post-status-text total-reactions-span">Total Reactions = 311</span>
+                    </p>
+                    <p class="text-center">
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-hand-thumbs-up-fill"></i>668</button>
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-heart-fill"></i>1.3k</button>  
+                      <button class="status-button open" onclick="reloadDiv('postComments')"><i class="bi bi-chat-left-dots-fill"></i>78</button>  
+                      <button class="status-button open" onclick="reloadDiv('postShared')"><i class="bi bi-share-fill"></i>3</button>
+                    </p>
+                    <p class="text-center">
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-angry-fill"></i>45</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-laughing-fill"></i>88</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-frown-fill"></i>23</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-dizzy-fill"></i>30</button> 
+                    </p>
+                      <div class="app-card-buttons center-hz">
+                        <button class="status-button open"  onclick="reloadDiv('detailContent')">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="app-card"> 
+                      <div class="row pd-top-3">
+                        <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-top">Abdullah Al Jaki </span></div>
+                        <div class="col text-right"><span class="post-status-text">Posted : 9m ago</span></div>
+                      </div>
+                      <div class="app-card__subtext">  
+                      <p>বিদ্যানন্দ - Bidyanondo ফাউন্ডেশনের একজন ক্ষুদ্র ডোনেটর হিসেবে ২০২০ থেকে ২০২২ সেশনের স্বাধীন অডিট রিপোর্ট এবং প্রজেক্ট প্রোফাইল আমার কাছে আছে।
+                        শুধু আমার কাছে না, যারা বিদ্যানন্দে দান করেন এবং করেছেন...</p>
+                        <p class="text-right title-ex-sm">Posted on 05-May-2023 03:36 P.M.</p>
+                    </div>
+                    <p class="text-center">
+                      <span class="post-status-text total-reactions-span">Total Reactions = 311</span>
+                    </p>
+                    <p class="text-center">
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-hand-thumbs-up-fill"></i>668</button>
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-heart-fill"></i>1.3k</button>  
+                      <button class="status-button open" onclick="reloadDiv('postComments')"><i class="bi bi-chat-left-dots-fill"></i>78</button>  
+                      <button class="status-button open" onclick="reloadDiv('postShared')"><i class="bi bi-share-fill"></i>3</button>
+                    </p>
+                    <p class="text-center">
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-angry-fill"></i>45</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-laughing-fill"></i>88</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-frown-fill"></i>23</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-dizzy-fill"></i>30</button> 
+                    </p>
+                      <div class="app-card-buttons center-hz">
+                        <button class="status-button open"  onclick="reloadDiv('detailContent')">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="row pd-top-1">
+                  <div class="col">
+                    <div class="app-card"> 
+                      <div class="row pd-top-3">
+                        <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-top">Abdullah Al Jaki </span></div>
+                        <div class="col text-right"><span class="post-status-text">Posted : 9m ago</span></div>
+                      </div>
+                      <div class="app-card__subtext">  
+                      <p>বিদ্যানন্দ - Bidyanondo ফাউন্ডেশনের একজন ক্ষুদ্র ডোনেটর হিসেবে ২০২০ থেকে ২০২২ সেশনের স্বাধীন অডিট রিপোর্ট এবং প্রজেক্ট প্রোফাইল আমার কাছে আছে।
+                        শুধু আমার কাছে না, যারা বিদ্যানন্দে দান করেন এবং করেছেন...</p>
+                        <p class="text-right title-ex-sm">Posted on 05-May-2023 03:36 P.M.</p>
+                    </div>
+                    <p class="text-center">
+                      <span class="post-status-text total-reactions-span">Total Reactions = 311</span>
+                    </p>
+                    <p class="text-center">
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-hand-thumbs-up-fill"></i>668</button>
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-heart-fill"></i>1.3k</button>  
+                      <button class="status-button open" onclick="reloadDiv('postComments')"><i class="bi bi-chat-left-dots-fill"></i>78</button>  
+                      <button class="status-button open" onclick="reloadDiv('postShared')"><i class="bi bi-share-fill"></i>3</button>
+                    </p>
+                    <p class="text-center">
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-angry-fill"></i>45</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-laughing-fill"></i>88</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-frown-fill"></i>23</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-dizzy-fill"></i>30</button> 
+                    </p>
+                      <div class="app-card-buttons center-hz">
+                        <button class="status-button open"  onclick="reloadDiv('detailContent')">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="app-card"> 
+                      <div class="row pd-top-3">
+                        <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-top">Abdullah Al Jaki </span></div>
+                        <div class="col text-right"><span class="post-status-text">Posted : 9m ago</span></div>
+                      </div>
+                      <div class="app-card__subtext">  
+                      <p>বিদ্যানন্দ - Bidyanondo ফাউন্ডেশনের একজন ক্ষুদ্র ডোনেটর হিসেবে ২০২০ থেকে ২০২২ সেশনের স্বাধীন অডিট রিপোর্ট এবং প্রজেক্ট প্রোফাইল আমার কাছে আছে।
+                        শুধু আমার কাছে না, যারা বিদ্যানন্দে দান করেন এবং করেছেন...</p>
+                        <p class="text-right title-ex-sm">Posted on 05-May-2023 03:36 P.M.</p>
+                    </div>
+                    <p class="text-center">
+                      <span class="post-status-text total-reactions-span">Total Reactions = 311</span>
+                    </p>
+                    <p class="text-center">
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-hand-thumbs-up-fill"></i>668</button>
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-heart-fill"></i>1.3k</button>  
+                      <button class="status-button open" onclick="reloadDiv('postComments')"><i class="bi bi-chat-left-dots-fill"></i>78</button>  
+                      <button class="status-button open" onclick="reloadDiv('postShared')"><i class="bi bi-share-fill"></i>3</button>
+                    </p>
+                    <p class="text-center">
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-angry-fill"></i>45</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-laughing-fill"></i>88</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-frown-fill"></i>23</button> 
+                      <button class="status-button open" onclick="reloadDiv('postReactions')"><i class="bi bi-emoji-dizzy-fill"></i>30</button> 
+                    </p>
+                      <div class="app-card-buttons center-hz">
+                        <button class="status-button open"  onclick="reloadDiv('detailContent')">View Details</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 postsearch-right-panel">
+          <div class="container-fluid default-panel" id="defaultPanel">
+            <h3 class="title-lg">Click on the buttons on the left and details will be shown here</h3>
+          </div>
+          <div class="container-fluid post-shared" id="postShared">
+            <div class="post-shared-single">
+              <div class="row pd-top-3">
+                <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+              </div>
+              <div class="row pd-top-2">
+                <p class="comment-text">জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে। জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" height="300px" alt="">
+                <div class="row pd-top-1">
+                  <p>#Showmen #LifeIsGood #FreedomFighters</p>
+                  <p class="text-center">
+                    <span><i class="bi bi-hand-thumbs-up-fill"></i>668</span>
+                    <span><i class="bi bi-heart-fill"></i>1.3k</span>  
+                    <!-- <span><i class="bi bi-chat-left-dots-fill"></i>78</span>   -->
+                    <span><i class="bi bi-share-fill"></i>3</span> 
+                    <span><i class="bi bi-emoji-angry-fill"></i>45</span> 
+                    <span><i class="bi bi-emoji-laughing-fill"></i>88</span> 
+                    <span><i class="bi bi-emoji-frown-fill"></i>23</span> 
+                    <span><i class="bi bi-emoji-dizzy-fill"></i>30</span> 
+                    <span> <b class="bi">&nbsp;&nbsp; = 311</b></span>
+                  </p>
+                  <p><button class="status-button open" onclick="showNestedComments('ShareExampleComment')"><i class="bi bi-chat-left-dots-fill"></i>78</button>  </p>
+                </div>
+                <div class="accordion accordion-flush nested-comments" id="ShareExampleComment">
+                  <div class="accordion-item  app-card-accordion">
+                    <h2 class="accordion-header" id="share-flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#share-flush-collapseOne" aria-expanded="false" aria-controls="share-flush-collapseOne">
+                        <div class="container">
+                          <div class="row pd-top-3">
+                            <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                            <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                          </div>
+                          <div class="row pd-top-3">
+                            <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="share-flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="share-flush-headingOne" data-bs-parent="#ShareExampleComment">
+                      <div class="accordion-body">
+                        <div class="accordion accordion-flush" id="share-accordionFlushExample2">
+                          <div class="accordion-item  app-card-accordion">
+                            <h2 class="accordion-header" id="share-flush-headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#share-flush-collapseTwo" aria-expanded="false" aria-controls="share-flush-collapseTwo">
+                                <div class="container">
+                                  <div class="row pd-top-3">
+                                    <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                    <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                  </div>
+                                  <div class="row pd-top-3">
+                                    <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                  </div>
+                                </div>
+                              </button>
+                            </h2>
+                            <div id="share-flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="share-flush-headingTwo" data-bs-parent="#share-accordionFlushExample2">
+                              <div class="accordion-body">
+                                <div class="container">
+                                  <div class="row pd-top-3">
+                                    <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                    <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                  </div>
+                                  <div class="row pd-top-3">
+                                    <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                  </div>
+                                </div>
+                               
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="accordion-item  app-card-accordion">
+                    <h2 class="accordion-header" id="flush-headingOneTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneTwo" aria-expanded="false" aria-controls="flush-collapseOneTwo">
+                        <div class="container">
+                          <div class="row pd-top-3">
+                            <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                            <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                          </div>
+                          <div class="row pd-top-3">
+                            <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOneTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingOneTwo" data-bs-parent="#accordionFlushExampleComment1">
+                      <div class="accordion-body">
+                        <div class="accordion accordion-flush" id="accordionFlushExample2">
+                          <div class="accordion-item  app-card-accordion">
+                            <h2 class="accordion-header" id="flush-headingTwoOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoOne" aria-expanded="false" aria-controls="flush-collapseTwoOne">
+                                <div class="container">
+                                  <div class="row pd-top-3">
+                                    <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                    <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                  </div>
+                                  <div class="row pd-top-3">
+                                    <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                  </div>
+                                </div>
+                              </button>
+                            </h2>
+                            <div id="flush-collapseTwoOne" class="accordion-collapse collapse" aria-labelledby="flush-headingTwoOne" data-bs-parent="#accordionFlushExample2">
+                              <div class="accordion-body">
+                                <div class="container">
+                                  <div class="row pd-top-3">
+                                    <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                    <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                  </div>
+                                  <div class="row pd-top-3">
+                                    <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="post-shared-single">
+              <div class="row pd-top-3">
+                <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+              </div>
+              <div class="row pd-top-2">
+                <p class="comment-text">জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে। জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" height="300px" alt="">
+                <div class="row pd-top-1">
+                  <p>#Showmen #LifeIsGood #FreedomFighters</p>
+                  <p class="text-center">
+                    <span><i class="bi bi-hand-thumbs-up-fill"></i>668</span>
+                    <span><i class="bi bi-heart-fill"></i>1.3k</span>  
+                    <span><i class="bi bi-chat-left-dots-fill"></i>78</span>  
+                    <span><i class="bi bi-share-fill"></i>3</span> 
+                    <span><i class="bi bi-emoji-angry-fill"></i>45</span> 
+                    <span><i class="bi bi-emoji-laughing-fill"></i>88</span> 
+                    <span><i class="bi bi-emoji-frown-fill"></i>23</span> 
+                    <span><i class="bi bi-emoji-dizzy-fill"></i>30</span> 
+                    <span> <b class="bi">&nbsp;&nbsp; = 311</b></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="post-shared-single">
+              <div class="row pd-top-3">
+                <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+              </div>
+              <div class="row pd-top-2">
+                <p class="comment-text">জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে। জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" height="300px" alt="">
+                <div class="row pd-top-1">
+                  <p>#Showmen #LifeIsGood #FreedomFighters</p>
+                  <p class="text-center">
+                    <span><i class="bi bi-hand-thumbs-up-fill"></i>668</span>
+                    <span><i class="bi bi-heart-fill"></i>1.3k</span>  
+                    <span><i class="bi bi-chat-left-dots-fill"></i>78</span>  
+                    <span><i class="bi bi-share-fill"></i>3</span> 
+                    <span><i class="bi bi-emoji-angry-fill"></i>45</span> 
+                    <span><i class="bi bi-emoji-laughing-fill"></i>88</span> 
+                    <span><i class="bi bi-emoji-frown-fill"></i>23</span> 
+                    <span><i class="bi bi-emoji-dizzy-fill"></i>30</span> 
+                    <span> <b class="bi">&nbsp;&nbsp; = 311</b></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="post-shared-single">
+              <div class="row pd-top-3">
+                <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+              </div>
+              <div class="row pd-top-2">
+                <p class="comment-text">জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে। জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" height="300px" alt="">
+                <div class="row pd-top-1">
+                  <p>#Showmen #LifeIsGood #FreedomFighters</p>
+                  <p class="text-center">
+                    <span><i class="bi bi-hand-thumbs-up-fill"></i>668</span>
+                    <span><i class="bi bi-heart-fill"></i>1.3k</span>  
+                    <span><i class="bi bi-chat-left-dots-fill"></i>78</span>  
+                    <span><i class="bi bi-share-fill"></i>3</span> 
+                    <span><i class="bi bi-emoji-angry-fill"></i>45</span> 
+                    <span><i class="bi bi-emoji-laughing-fill"></i>88</span> 
+                    <span><i class="bi bi-emoji-frown-fill"></i>23</span> 
+                    <span><i class="bi bi-emoji-dizzy-fill"></i>30</span> 
+                    <span> <b class="bi">&nbsp;&nbsp; = 311</b></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="container-fluid post-reactions" id="postReactions">
+            <div class="row">
+              <div class="col-2">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt="">
+              </div>
+              <div class="col-5">
+                <h5><span class="post-status-text">Md. Shariful Islam</span></h5>
+                <h5>Home Town : <span class="yellow-text"> Noakhali </span></h5>
+                <h5>Profile Type : <span class="yellow-text">Page </span></h5>
+              </div>
+              <div class="col-5">
+                <h5>Age Group : <span class="yellow-text">35-49</span></h5>
+                <h5>Followers Count : <span class="yellow-text">668k</span></h5>
+                <h5>Friends Count : <span class="yellow-text">928k</span></h5>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-2">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt="">
+              </div>
+              <div class="col-5">
+                <h5><span class="post-status-text">Md. Shariful Islam</span></h5>
+                <h5>Home Town : <span class="yellow-text"> Noakhali </span></h5>
+                <h5>Profile Type : <span class="yellow-text">Page </span></h5>
+              </div>
+              <div class="col-5">
+                <h5>Age Group : <span class="yellow-text">35-49</span></h5>
+                <h5>Followers Count : <span class="yellow-text">668k</span></h5>
+                <h5>Friends Count : <span class="yellow-text">928k</span></h5>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-2">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt="">
+              </div>
+              <div class="col-5">
+                <h5><span class="post-status-text">Md. Shariful Islam</span></h5>
+                <h5>Home Town : <span class="yellow-text"> Noakhali </span></h5>
+                <h5>Profile Type : <span class="yellow-text">Page </span></h5>
+              </div>
+              <div class="col-5">
+                <h5>Age Group : <span class="yellow-text">35-49</span></h5>
+                <h5>Followers Count : <span class="yellow-text">668k</span></h5>
+                <h5>Friends Count : <span class="yellow-text">928k</span></h5>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-2">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt="">
+              </div>
+              <div class="col-5">
+                <h5><span class="post-status-text">Md. Shariful Islam</span></h5>
+                <h5>Home Town : <span class="yellow-text"> Noakhali </span></h5>
+                <h5>Profile Type : <span class="yellow-text">Page </span></h5>
+              </div>
+              <div class="col-5">
+                <h5>Age Group : <span class="yellow-text">35-49</span></h5>
+                <h5>Followers Count : <span class="yellow-text">668k</span></h5>
+                <h5>Friends Count : <span class="yellow-text">928k</span></h5>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-2">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt="">
+              </div>
+              <div class="col-5">
+                <h5><span class="post-status-text">Md. Shariful Islam</span></h5>
+                <h5>Home Town : <span class="yellow-text"> Noakhali </span></h5>
+                <h5>Profile Type : <span class="yellow-text">Page </span></h5>
+              </div>
+              <div class="col-5">
+                <h5>Age Group : <span class="yellow-text">35-49</span></h5>
+                <h5>Followers Count : <span class="yellow-text">668k</span></h5>
+                <h5>Friends Count : <span class="yellow-text">928k</span></h5>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-2">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt="">
+              </div>
+              <div class="col-5">
+                <h5><span class="post-status-text">Md. Shariful Islam</span></h5>
+                <h5>Home Town : <span class="yellow-text"> Noakhali </span></h5>
+                <h5>Profile Type : <span class="yellow-text">Page </span></h5>
+              </div>
+              <div class="col-5">
+                <h5>Age Group : <span class="yellow-text">35-49</span></h5>
+                <h5>Followers Count : <span class="yellow-text">668k</span></h5>
+                <h5>Friends Count : <span class="yellow-text">928k</span></h5>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-2">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt="">
+              </div>
+              <div class="col-5">
+                <h5><span class="post-status-text">Md. Shariful Islam</span></h5>
+                <h5>Home Town : <span class="yellow-text"> Noakhali </span></h5>
+                <h5>Profile Type : <span class="yellow-text">Page </span></h5>
+              </div>
+              <div class="col-5">
+                <h5>Age Group : <span class="yellow-text">35-49</span></h5>
+                <h5>Followers Count : <span class="yellow-text">668k</span></h5>
+                <h5>Friends Count : <span class="yellow-text">928k</span></h5>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-2">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt="">
+              </div>
+              <div class="col-5">
+                <h5><span class="post-status-text">Md. Shariful Islam</span></h5>
+                <h5>Home Town : <span class="yellow-text"> Noakhali </span></h5>
+                <h5>Profile Type : <span class="yellow-text">Page </span></h5>
+              </div>
+              <div class="col-5">
+                <h5>Age Group : <span class="yellow-text">35-49</span></h5>
+                <h5>Followers Count : <span class="yellow-text">668k</span></h5>
+                <h5>Friends Count : <span class="yellow-text">928k</span></h5>
+              </div>
+            </div>
+          </div> 
+          <div class="container-fluid comment-posts" id="postComments">
+            <div class="single-comment">
+              <div class="row pd-top-3">
+                <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+              </div>
+              <div class="row pd-top-2">
+                <p class="comment-text">জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে। জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                <div class="row pd-top-1">
+                  <p class="text-center">
+                    <!-- <span><i class="bi bi-chat-left-dots-fill"></i>78</span>  -->
+                    
+                    <span><i class="bi bi-hand-thumbs-up-fill"></i>668</span>
+                    <span><i class="bi bi-heart-fill"></i>1.3k</span>  
+                    <span><i class="bi bi-share-fill"></i>3</span> 
+                    <span><i class="bi bi-emoji-angry-fill"></i>45</span> 
+                    <span><i class="bi bi-emoji-laughing-fill"></i>88</span> 
+                    <span><i class="bi bi-emoji-frown-fill"></i>23</span> 
+                    <span><i class="bi bi-emoji-dizzy-fill"></i>30</span> 
+                    <span> <b class="bi">&nbsp;&nbsp; = 311</b></span>
+                  </p>
+                  <p><button class="status-button open" onclick="showNestedComments('accordionFlushExampleComment1')"><i class="bi bi-chat-left-dots-fill"></i>78</button>  </p>
+                </div>
+                <div class="accordion accordion-flush nested-comments" id="accordionFlushExampleComment1">
+                  <div class="accordion-item  app-card-accordion">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <div class="container">
+                          <div class="row pd-top-3">
+                            <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                            <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                          </div>
+                          <div class="row pd-top-3">
+                            <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExampleComment1">
+                      <div class="accordion-body">
+                        <div class="accordion accordion-flush" id="accordionFlushExample2">
+                          <div class="accordion-item  app-card-accordion">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <div class="container">
+                                  <div class="row pd-top-3">
+                                    <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                    <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                  </div>
+                                  <div class="row pd-top-3">
+                                    <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                  </div>
+                                </div>
+                              </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample2">
+                              <div class="accordion-body">
+                                <div class="container">
+                                  <div class="row pd-top-3">
+                                    <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                    <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                  </div>
+                                  <div class="row pd-top-3">
+                                    <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                  </div>
+                                </div>
+                                <!-- <div class="accordion accordion-flush" id="accordionFlushExample3">
+                                  <div class="accordion-item  app-card-accordion">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                        <div class="container">
+                                          <div class="row pd-top-3">
+                                            <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                            <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                          </div>
+                                          <div class="row pd-top-3">
+                                            <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                          </div>
+                                        </div>
+                                      </button>
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample3">
+                                      <div class="accordion-body">
+                                        ASDF
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> -->
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                  <div class="accordion-item  app-card-accordion">
+                    <h2 class="accordion-header" id="flush-headingOneTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneTwo" aria-expanded="false" aria-controls="flush-collapseOneTwo">
+                        <div class="container">
+                          <div class="row pd-top-3">
+                            <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                            <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                          </div>
+                          <div class="row pd-top-3">
+                            <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOneTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingOneTwo" data-bs-parent="#accordionFlushExampleComment1">
+                      <div class="accordion-body">
+                        <div class="accordion accordion-flush" id="accordionFlushExample2">
+                          <div class="accordion-item  app-card-accordion">
+                            <h2 class="accordion-header" id="flush-headingTwoOne">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoOne" aria-expanded="false" aria-controls="flush-collapseTwoOne">
+                                <div class="container">
+                                  <div class="row pd-top-3">
+                                    <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                    <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                  </div>
+                                  <div class="row pd-top-3">
+                                    <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                  </div>
+                                </div>
+                              </button>
+                            </h2>
+                            <div id="flush-collapseTwoOne" class="accordion-collapse collapse" aria-labelledby="flush-headingTwoOne" data-bs-parent="#accordionFlushExample2">
+                              <div class="accordion-body">
+                                <div class="container">
+                                  <div class="row pd-top-3">
+                                    <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                    <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                  </div>
+                                  <div class="row pd-top-3">
+                                    <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="single-comment">
+              <div class="row pd-top-3">
+                <div class="col text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+              </div>
+              <div class="row pd-top-2">
+                <p class="comment-text">জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে। জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                <div class="row pd-top-1">
+                  <p class="text-center">
+                    <!-- <span><i class="bi bi-chat-left-dots-fill"></i>78</span>  -->
+                    
+                    <span><i class="bi bi-hand-thumbs-up-fill"></i>668</span>
+                    <span><i class="bi bi-heart-fill"></i>1.3k</span>  
+                    <span><i class="bi bi-share-fill"></i>3</span> 
+                    <span><i class="bi bi-emoji-angry-fill"></i>45</span> 
+                    <span><i class="bi bi-emoji-laughing-fill"></i>88</span> 
+                    <span><i class="bi bi-emoji-frown-fill"></i>23</span> 
+                    <span><i class="bi bi-emoji-dizzy-fill"></i>30</span> 
+                    <span> <b class="bi">&nbsp;&nbsp; = 311</b></span>
+                  </p>
+                  <p><button class="status-button open" onclick="showNestedComments('accordionFlushExampleComment2')"><i class="bi bi-chat-left-dots-fill"></i>78</button>  </p>
+                </div>
+                <div class="accordion accordion-flush nested-comments" id="accordionFlushExampleComment2">
+                  <div class="accordion-item  app-card-accordion">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <div class="container">
+                          <div class="row pd-top-3">
+                            <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                            <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                          </div>
+                          <div class="row pd-top-3">
+                            <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                          </div>
+                        </div>
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExampleComment2">
+                      <div class="accordion-body">
+                        <div class="accordion accordion-flush" id="accordionFlushExample22">
+                          <div class="accordion-item  app-card-accordion">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <div class="container">
+                                  <div class="row pd-top-3">
+                                    <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                    <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                  </div>
+                                  <div class="row pd-top-3">
+                                    <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                  </div>
+                                </div>
+                              </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample22">
+                              <div class="accordion-body">
+                                <div class="container">
+                                  <div class="row pd-top-3">
+                                    <div class="col-8 text-left"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid post-reactions-profile-pic" alt=""><span class="post-status-text align-bottom">Abdullah Al Jaki </span></div>
+                                    <div class="col text-right"><span class="post-status-text">9m ago</span></div>
+                                  </div>
+                                  <div class="row pd-top-3">
+                                    <p>জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="container-fluid" id="detailContent">
+            <div class="row pd-top-3">
+              <img src="https://th.bing.com/th/id/OIP.I4vl_X2AO2xiFzQENzsldgHaGF?pid=ImgDet&rs=1" alt="" class="tab-details-container-img center-hz">
+            </div>  
+            <div class="row pd-top-3 post-status">
+              <p> <span class="post-status-text">Status : </span>" গত কয়েকদিন ধরে অনেকে বলছেন, বিদ্যানন্দ নিয়ে আপনার মতামত চাই। সবাইকে বলেছি,
+                আমি সাধারণত চট করে কিছুবলি না। একটু জেনেশুনে লিখব। কয়েকদিন ভীষণ ব্যস্ততার মধ্যে কাটিয়েছি। হঠাৎ করে গতকাল
+                দেখলাম একটি ভিডিওতে পিনাকী ভট্টাচার্য বিদ্যানন্দ এবং এর প্রতিষ্ঠাতা কিশোর কুমার দাসকে একেবারে ধুলোয় মিশিয়ে দিচ্ছে।
+                এতে সুবিধা হলো আমার, কষ্ট করে বিদ্যানন্দের বিষয়ে খোঁজ-খবর করতে হলো না। আমি ১০০ ভাগ নিশ্চিত হলাম বিদ্যানন্দ
+                তার অবস্থানে স্বচ্ছ আছে। কিশোর কুমার দাস একজন নিবেদিত মানষ।ু আমি #বিদ্যানন্দ-এর সঙ্গে আছে, পক্ষে আছি। আপনারাও
+                থাকুন পরম নিশ্চিন্তে। "</p>
+            </div>
+            <div class="row">
+              <div class="col"><p class="text-right"><u> <a href=""> Gias Uddin Ahmed</a></u> <br>03-May-2023 02:16 P.M.</p></div>
+            </div>
+            <!-- <div class="row pd-top-1">
+              <p class="text-center"><span class="post-status-text total-reactions-span">Total Reactions = 311</span></p>
+              <p class="text-center">
+                <span><i class="bi bi-hand-thumbs-up-fill"></i>668</span>
+                <span><i class="bi bi-heart-fill"></i>1.3k</span>  
+                <span><i class="bi bi-chat-left-dots-fill"></i>78</span>  
+                <span><i class="bi bi-share-fill"></i>3</span> 
+                <span><i class="bi bi-emoji-angry-fill"></i>45</span> 
+                <span><i class="bi bi-emoji-laughing-fill"></i>88</span> 
+                <span><i class="bi bi-emoji-frown-fill"></i>23</span> 
+                <span><i class="bi bi-emoji-dizzy-fill"></i>30</span> 
+              </p>
+            </div>  -->
+            <!-- <div class="row pd-top-3">
+              <div class="col post-sm-details"><p>Attached Img: </p></div>
+            </div> -->
+            
+            <div class="row  pd-top-3">
+              <div class="col-2  post-sm-details">
+                <p>Video:</p>
+              </div>
+              <div class="col-10 post-sm-details">
+                <div class="video-url-frame">
+                  <iframe src="https://www.youtube.com/embed/YAEwBWmrL2s"></iframe>
+                </div>
+              </div>
+                <!-- <iframe src="https://www.youtube.com/watch?v=ajGRV5ZS9uQ&ab_channel=BBC" width="300" height="250" frameborder="0" allowfullscreen="allowfullscreen"></iframe> -->
+                <!-- <a href="https://www.youtube.com/watch?v=ajGRV5ZS9uQ&ab_channel=BBC" target="_blank">Click to see the video</a></p></div>  -->
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Video View Count : <span class="yellow-text">589</span></p></div>    
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Post Type : <span class="yellow-text">Shared Link</span></p></div>
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Text Lang : <span class="yellow-text">Bangla</span></p></div>
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Text Tagged users : <span class="yellow-text">@Md. Rafiqul Islam, @Osman Talukder, @Md. Harunur Rashid, @Md. Kabirul Islam</span></p></div>
+            </div>
+            <div class="row ">
+              <div class="col post-sm-details"><p>Text Tags: <span class="yellow-text">#France #COVID</span></p></div>
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Attached Link : <span class="yellow-text"><a href="https://www.youtube.com/watch?v=ajGRV5ZS9uQ&ab_channel=BBC" target="_blank">Follow the Link</a></span></p></div>
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Att. Link Description: <span class="yellow-text">হঠাৎ করে গতকাল
+                দেখলাম একটি ভিডিওতে পিনাকী ভট্টাচার্য বিদ্যানন্দ </span></p></div>
+            </div>
+            <div class="row ">
+              <div class="col post-sm-details"><p>Overlay Text : <span class="yellow-text">পিনাকী ভট্টাচার্য </span></p></div>
+            </div>
+            <div class="row">
+              <div class="col-3  post-sm-details">
+                <p>Attached Img(S3) : </p>
+              </div>
+              <div class="col-9 post-sm-details">
+                <div class="right-panel-img-container">
+                  <a href="https://i.guim.co.uk/img/media/2eeb7f749767f66d551430cb69cceb6a3daeea44/0_185_5560_3336/master/5560.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&s=eac962c3a5e909579213258ef2f1df2f" target="_blank">
+                  <img src="https://i.guim.co.uk/img/media/2eeb7f749767f66d551430cb69cceb6a3daeea44/0_185_5560_3336/master/5560.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&s=eac962c3a5e909579213258ef2f1df2f" height="200px" alt=""></a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Att. Image Content: <span class="yellow-text">১০০ ভাগ নিশ্চিত</span></p></div>
+            </div>
+            <div class="row ">
+              <div class="col post-sm-details"><p>Att. Media Ids: <span class="yellow-text"></span></p></div>
+            </div>
+            <div class="row">
+              <div class="col-3  post-sm-details">
+                <p>Att. Media Preview Urls : </p>
+              </div>
+              <div class="col-9 post-sm-details">
+                <div class="row  pd-top-1">
+                  <div class="col right-panel-img-container">
+                    1.<a href="https://ichef.bbci.co.uk/news/976/cpsprodpb/60CF/production/_129638742_gettyimages-1488399556.jpg.webp" target="_blank">
+                    <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/60CF/production/_129638742_gettyimages-1488399556.jpg.webp" height="100px" alt=""></a>
+                    <br>
+                  </div>
+                  <div class="col right-panel-img-container">
+                    2.<a href="https://images.axios.com/EDuPZlQSMZySS7HJYQCui7f6GXk=/0x625:6000x4000/1920x1080/2020/06/14/1592101150634.jpg" target="_blank">
+                    <img src="https://images.axios.com/EDuPZlQSMZySS7HJYQCui7f6GXk=/0x625:6000x4000/1920x1080/2020/06/14/1592101150634.jpg" height="100px" alt=""></a>
+                  </div>
+                </div>
+                <div class="row  pd-top-3">
+                  <div class="col right-panel-img-container">
+                    3.<a href="https://thumbnails.texastribune.org/1R-7a-Rn3KvnrACvFt0bFTQKzIc=/1200x630/filters:quality(95):focal(0x0:3000x2000)/static.texastribune.org/media/files/25e245fb34320e7fc04e4598a715b14a/0415%20Queer%20March%20Cap%20MM%20TT%2005.jpg" target="_blank">
+                    <img src="https://thumbnails.texastribune.org/1R-7a-Rn3KvnrACvFt0bFTQKzIc=/1200x630/filters:quality(95):focal(0x0:3000x2000)/static.texastribune.org/media/files/25e245fb34320e7fc04e4598a715b14a/0415%20Queer%20March%20Cap%20MM%20TT%2005.jpg" height="100px" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row pd-top-1">
+              <div class="col-3  post-sm-details">
+                <p>Att. Media Preview Urls(s3) : </p>
+              </div>
+              <div class="col-9 post-sm-details">
+                <div class="row  pd-top-1">
+                  <div class="col right-panel-img-container">
+                    1.<a href="https://images.axios.com/EDuPZlQSMZySS7HJYQCui7f6GXk=/0x625:6000x4000/1920x1080/2020/06/14/1592101150634.jpg" target="_blank">
+                      <img src="https://images.axios.com/EDuPZlQSMZySS7HJYQCui7f6GXk=/0x625:6000x4000/1920x1080/2020/06/14/1592101150634.jpg" height="100px" alt=""></a>
+                    
+                  
+                  </div>
+                  <div class="col right-panel-img-container">
+                    2. <a href="https://ichef.bbci.co.uk/news/976/cpsprodpb/60CF/production/_129638742_gettyimages-1488399556.jpg.webp" target="_blank">
+                      <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/60CF/production/_129638742_gettyimages-1488399556.jpg.webp" height="100px" alt=""></a>
+                  </div>
+                </div>
+                <div class="row  pd-top-3">
+                  <div class="col right-panel-img-container">
+                    3. <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Canadian_COVID-19_protesters_%28cropped%29.jpg/640px-Canadian_COVID-19_protesters_%28cropped%29.jpg" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Canadian_COVID-19_protesters_%28cropped%29.jpg/640px-Canadian_COVID-19_protesters_%28cropped%29.jpg" height="100px" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col post-sm-details"><p>Att. Media Preview Content : <span class="yellow-text"> বিদ্যানন্দ নিয়ে আপনার মতামত চাই, <br>পিনাকী ভট্টাচার্য, <br>কিশোর কুমার দাস </span></p></div>
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Att. Post ID : <span class="yellow-text"></span><a href="https://www.facebook.com/BBCBengaliService" target="_blank">See the Post</a></p></div>
+            </div>
+            <div class="row">
+              <div class="col-3  post-sm-details">
+                <p>Att. Video Preview Urls : </p>
+              </div>
+              <div class="col-9 post-sm-details">
+                <div class="row  pd-top-1">
+                  <div class="col right-panel-img-container">
+                    <div class="video-url-frame">
+                      1. <iframe src="https://www.youtube.com/embed/eJEc-McnliI"></iframe>
+                      
+                    </div>
+                  </div>
+                  <div class="col right-panel-img-container">
+                    <div class="video-url-frame">
+                      2. <iframe src="https://www.youtube.com/embed/m_AYMfDAwOw"></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div class="row  pd-top-3">
+                  <div class="col right-panel-img-container">
+                    <div class="video-url-frame">
+                      3. <a href="https://www.youtube.com/watch?v=ajGRV5ZS9uQ&ab_channel=BBC" target="_blank">View the Video</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row ">
+              <div class="col-3  post-sm-details">
+                <p>Att. Video Preview Urls(s3) : </p>
+              </div>
+              <div class="col-9 post-sm-details">
+                <div class="row  pd-top-1">
+                  <div class="col right-panel-img-container">
+                    <div class="video-url-frame">
+                      1. <iframe src="https://www.youtube.com/embed/47vwfZgONO0"></iframe>
+                      
+                    </div>
+                  </div>
+                  <div class="col right-panel-img-container">
+                    <div class="video-url-frame">
+                      2. <iframe src="https://www.youtube.com/embed/WLC4LhooYwE"></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div class="row  pd-top-3">
+                  <div class="col right-panel-img-container">
+                    <div class="video-url-frame">
+                      3. <a href="https://www.youtube.com/watch?v=ajGRV5ZS9uQ&ab_channel=BBC" target="_blank">View the Video</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3  post-sm-details">
+                <p>Att. Video Preview Urls(s3) : </p>
+              </div>
+              <div class="col-9 post-sm-details">
+                <div class="post-screenshot-div">
+                  <a href="https://data365media.blob.core.windows.net/tests-media/facebook/post/3624891874404493/screenshot.png" target="_blank">
+                  <img src="https://data365media.blob.core.windows.net/tests-media/facebook/post/3624891874404493/screenshot.png" alt="">
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Fact Checks : { <br>  
+                Id: <span class="yellow-text"><a href="https://www.facebook.com/DailyStarNews/" target="_blank">The Daily Star</a></span><br>
+                Title: <span class="yellow-text">বিদ্যানন্দ</span><br>
+                Sub Title: <span class="yellow-text">পিনাকী ভট্টাচার্য</span><br>
+                Provider Id: <span class="yellow-text"><a href="https://www.facebook.com/maasrangatvnews/" target="_blank">13246465146514</a></span><br>
+                Provider Name: <span class="yellow-text">Md. Shamim Osman</span><br>
+                Url: <span class="yellow-text"><a href="https://www.facebook.com/BBCBengaliService" target="_blank">Visit Provider</a></span><br>
+              }
+              </p></div>
+            </div>
+            <div class="row ">
+              <div class="col post-sm-details"><p>Video Duration : <span class="yellow-text">1 hour 23 Mins</span></p></div>
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Owner ID : <span class="yellow-text"><a href="https://www.facebook.com/groups/2078358952295455" target="_blank">Jamuna News | ২৪ ঘন্টাই খবর</a></span></p></div>
+            </div>
+            <div class="row">
+              <div class="col post-sm-details"><p>Group ID : <span class="yellow-text"><a href="https://www.facebook.com/BBCBengaliService" target="_blank">BBC News বাংলা</a></span></p></div>
+            </div>
+            <div class="row">
+              <div class="col post-sm-details">
+                <div class="app-card-buttons">
+                  <button class="status-button open  center-hz"  onclick="reloadDiv('detailContent')">Create Post</button>
+                </div>
+              </div>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-center" id="exampleModalLabel">Post Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="status-button open" data-bs-dismiss="modal">Close</button> -->
+            <button type="button" class="status-button open">Create Issue </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="js/postsearch/custom-script.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
