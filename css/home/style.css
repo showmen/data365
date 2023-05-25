@@ -247,3 +247,38 @@ body {
 .purple-transp-bg{
     background-color: rgb(227 181 255 / 50%);
 } */
+
+
+/***********Profile***************************/
+
+/***********Accordion Customization*****************/
+.accordion-button {
+    border: 1px solid var(--theme-color) !important;
+    background-color: var(--theme-dark-transparant) !important;
+    outline: var(--theme-color) !important;
+    color: var(--theme-color) !important;
+}
+
+.accordion-button:focus {
+    background-color: var(--theme-dark-transparant) !important;
+    outline: 0 none !important;
+    color: var(--theme-color) !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.accordion-button::after {
+    filter: brightness(0%) invert(80%);
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0%) invert(80%);
+}
+
+.d-category-inner .accordion-item{
+    background-color:var(--theme-dark-transparant);
+    color:white;
+    backdrop-filter: blur(10px);
+    /* padding-top:3%; */
+    /* border:1px solid var(--dropdown-bg); */
+    border:1px solid white;
+}
