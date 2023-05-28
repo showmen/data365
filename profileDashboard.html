@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
     <!-- Bootstrap CSS End-->
     <link rel="stylesheet" href="css/home/style.css">
 
@@ -35,106 +36,474 @@
         </div>
         </div>
     </nav>
-    <div class="container-fluid main-container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row pd-top-1">
+    <div class="container-fluid mt-3">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs justify-content-center" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#findProfile">Find Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#autoProfile">Profiles Currently Monitoring</a>
+          </li>
+        </ul>
+      
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div id="findProfile" class="container-fluid tab-pane active"><br>
+            <div class="container-fluid">
+                <div class="row">
                     <div class="col-md-12 dasboard-category ">
-                        <div class="d-category-inner">
+                        <div class="d-category-inner under-tab">
                             <div class="accordion" id="accordionExample">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        Set Data Collection & Auto Update Task For Profile
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Select Parameters for Searching Profile
                                     </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <div class="row">
-                                        <h3 class="title-md text-left">Select Parameters</h3>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <!-- Parameters row 1 -->
+                                            <div class="row pd-lr-3 pd-top-1">
+                                                <div class="col">
+                                                <p class=" title-ex-sm"><input type="checkbox" checked name=""> Max Page Size : <input class="input-sm" type="text" value="50" name=""></p>
+                                                </div>
+                                                <div class="col">
+                                                <p class=" title-ex-sm"><input type="checkbox" checked name=""> Order by: <input class="input-sm" type="text" value="date_desc" name=""></p>
+                                                </div>
+                                                <div class="col">
+                                                <p class=" title-ex-sm"><input type="checkbox" name=""> Location ID: <input class="input-sm" type="text" name=""></p>
+                                                </div>
+                                                <div class="col">
+                                                <p class=" title-ex-sm"><input type="checkbox" name=""> Cursor ID: <input class="input-sm" type="text" name=""></p>
+                                                </div>
+                                                <div class="col">
+                                                <p class=" title-ex-sm"><input type="checkbox" name=""> School ID : <input class="input-sm" type="text" name=""></p>
+                                                </div>
+                                                <div class="col">
+                                                <p class=" title-ex-sm"><input type="checkbox" name=""> Employer ID  : <input class="input-sm" type="text" name=""></p>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- Parameters row 4 -->
+                                            <div class="row  pd-lr-3 ">
+                                                <div class="col-2">
+                                                    <select name="" class="form-select" id="">
+                                                        <option value="user">User</option>
+                                                        <option value="Page">Page</option>
+                                                        <option value="Groups">Groups</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-4"><hr></div>
+                                                <div class="col">
+                                                    <div class="search-bar input-group mb-3">
+                                                        <input type="text" class="form-control" placeholder="Search Profile" aria-label="Keyword" aria-describedby="basic-addon1"><button class="fb-color-btn"><i class="bi bi-search"></i> &nbsp;&nbsp;Search</button>
+                                                    </div>
+                                                </div>
+                                             
+                                            </div>
                                         </div>
-                                        <!-- Parameters row 1 -->
-                                        <div class="row pd-top-1">
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Max Posts : <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Location Id : <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Author ID: <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> From Date : <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> To Date  : <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Load Comments : <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        </div>
-                                        <!-- Parameters row 2 -->
-                                        <div class="row">
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Max Comments : <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Comments Type: <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Load Replies: <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Load Reactors : <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Max Reactors  : <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Load Shares : <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        </div>
-                                        <!-- Parameters row 3 -->
-                                        <div class="row">
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Max Shares : <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-ex-sm"><input type="checkbox" name=""> Search Request: <input class="input-sm" type="text" name=""></p>
-                                        </div>
-                                        <div class="col"></div>
-                                        <div class="col"></div>
-                                        <div class="col"></div>
-                                        <div class="col"></div>
-                                        </div>
-                                        <!-- Parameters row 4 -->
-                                        <div class="row">
-                                        <div class="col-6"><hr></div>
-                                        <div class="col">
-                                            <p class=" title-sm"><button class="fb-color-btn"><i class="bi bi-cloud-arrow-down"></i> &nbsp;&nbsp;Collect Now</button></p>
-                                        </div>
-                                        <div class="col">
-                                            <p class=" title-sm"><button class="fb-color-btn"><i class="bi bi-arrow-clockwise"></i> &nbsp;&nbsp; Auto Update</button></p>
-                                        </div>
-                                        
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row justify-content-center pd-top-1">
+                    <div class="col-6 profile-search-results">Search Results - Profile</div>
+                </div>
+                <div class="row justify-content-center pd-top-1">
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Md. Tanvir Ahmed&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in Dhaka University, Bangladesh</p>
+                                    <p>598 Friends</p>
+                                    <p>615 Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Salman Muktadir&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in North-South University, Bangladesh</p>
+                                    <p>598 Friends</p>
+                                    <p>615 Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Sakib al Hassan&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in American International University, Bangladesh</p>
+                                    <p>5.8 Friends</p>
+                                    <p>6M Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1639747280804-dd2d6b3d88ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" class="img-fluid " alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Md. Taskin Ahmed&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in Stamford University, Bangladesh</p>
+                                    <p>6k Friends</p>
+                                    <p>50k Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center pd-top-1">
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Sakib al Hassan&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in American International University, Bangladesh</p>
+                                    <p>5.8 Friends</p>
+                                    <p>6M Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Salman Muktadir&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in North-South University, Bangladesh</p>
+                                    <p>598 Friends</p>
+                                    <p>615 Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1639747280804-dd2d6b3d88ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" class="img-fluid " alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Md. Taskin Ahmed&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in Stamford University, Bangladesh</p>
+                                    <p>6k Friends</p>
+                                    <p>50k Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Md. Tanvir Ahmed&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in Dhaka University, Bangladesh</p>
+                                    <p>598 Friends</p>
+                                    <p>615 Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center pd-top-1">
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Md. Tanvir Ahmed&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in Dhaka University, Bangladesh</p>
+                                    <p>598 Friends</p>
+                                    <p>615 Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Salman Muktadir&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in North-South University, Bangladesh</p>
+                                    <p>598 Friends</p>
+                                    <p>615 Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Sakib al Hassan&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in American International University, Bangladesh</p>
+                                    <p>5.8 Friends</p>
+                                    <p>6M Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="container-fluid">
+                            <div class="row profile-preview-container">
+                                <div class="col-md-4">
+                                    <img src="https://images.unsplash.com/photo-1639747280804-dd2d6b3d88ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" class="img-fluid " alt="">
+                                </div>
+                                <div class="col-md-8">
+                                    <p><button class="fb-color-btn">Md. Taskin Ahmed&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></p>
+                                    <p>From Sylhet</p>
+                                    <p>Studied in Stamford University, Bangladesh</p>
+                                    <p>6k Friends</p>
+                                    <p>50k Followers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div id="autoProfile" class="container-fluid tab-pane fade"><br>
+            <div class="container-fluid main-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row pd-top-1">
+                            <div class="col-md-4 auto-scroller-container">
+                                <p>User Profiles</p>
+                                <table id="pageTable" class="autoupdate-table display">
+                                    <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Img</th>
+                                            <th>Page</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img src="https://images.unsplash.com/photo-1639747280804-dd2d6b3d88ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" class="img-fluid " alt=""></td>
+                                            <td>Salman Muktadir</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" class="img-fluid " alt=""></td>
+                                            <td>Md. Shahadat Hossain</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid " alt=""></td>
+                                            <td>Abdullah Al Zaki</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid " alt=""></td>
+                                            <td>Tahsan Ahmed</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td><img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" class="img-fluid " alt=""></td>
+                                            <td>Md. Taskin Ahmed</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td><img src="https://images.unsplash.com/photo-1639747280804-dd2d6b3d88ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" class="img-fluid " alt=""></td>
+                                            <td>Md. Taskin Ahmed</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4 auto-scroller-container justify-content-center">
+                                <p>Pages</p>
+                                <table id="profileUserTable" class="autoupdate-table display">
+                                    <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Img</th>
+                                            <th>Profiles</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.CoseGZ04oEAv9qdrCzKhSAHaDd?w=349&h=163&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>banglanews24.com </td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.PCkpygiTGlMGOAeHNAtlqQHaEq?w=279&h=180&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>BBC Bangla</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.nYr8p5AYOdDebWzeQMWJogHaEK?w=292&h=180&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>SA TV News</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.6ubmWGKwByGQUBoh53rvGgAAAA?w=184&h=136&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>Ekushey TV</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.XKgeM3K9YRmENJqkMzqBaAHaFj?w=242&h=181&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>Bangla Vision</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.ZkMZGZHw7OqfnDOOwQ0c3QHaDU?w=335&h=156&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>Shomoy TV</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-4 auto-scroller-container justify-content-center">
+                                <p>Groups</p>
+                                <table id="profileGroupTable" class="autoupdate-table display">
+                                    <thead>
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Img</th>
+                                            <th>Profiles</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.ZkMZGZHw7OqfnDOOwQ0c3QHaDU?w=335&h=156&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>Shomoy TV</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.nYr8p5AYOdDebWzeQMWJogHaEK?w=292&h=180&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>SA TV News</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.PCkpygiTGlMGOAeHNAtlqQHaEq?w=279&h=180&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>BBC Bangla</td>  
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.6ubmWGKwByGQUBoh53rvGgAAAA?w=184&h=136&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>Ekushey TV</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.CoseGZ04oEAv9qdrCzKhSAHaDd?w=349&h=163&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>banglanews24.com </td>
+                                            
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td><img src="https://th.bing.com/th/id/OIP.XKgeM3K9YRmENJqkMzqBaAHaFj?w=242&h=181&c=7&r=0&o=5&pid=1.7" class="img-fluid " alt=""></td>
+                                            <td>Bangla Vision</td>
+                                            <td><button class="fb-color-btn">View&nbsp;&nbsp;<i class="bi bi-arrow-right-circle float-end"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
                 
             </div>
-            
+          </div>
         </div>
-        
-    </div>
+      </div>
+    
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready( function () {
+            $('#profileUserTable').DataTable({
+                pageLength : 5,
+                lengthChange: false
+            });
+            $('#pageTable').DataTable({
+                pageLength : 5,
+                lengthChange: false
+            });
+            $('#profileGroupTable').DataTable({
+                pageLength : 5,
+                lengthChange: false
+            });
+        } );
+    </script>
     <!-- Option 1: Bootstrap Bundle with Popper End-->
 </body>
 </html>
