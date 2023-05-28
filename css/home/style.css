@@ -371,6 +371,30 @@ body {
     margin-top:5px;
 }
 
+
+/************Single Profile******************************/
+.transparent-container{
+    background-color:var(--theme-dark-transparant);
+    color:white;
+    backdrop-filter: blur(10px);
+}
+
+.cover-photo-container{
+    height:40vh;
+    margin-left:auto;
+    margin-right:auto;
+    background: url('https://wallpapercave.com/wp/ylvyN1V.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cover-photo-container img{
+    height:20vh;
+    margin-bottom:2px;
+    
+}
+
 /***********Accordion Customization*****************/
 .accordion-button {
     border: 1px solid var(--theme-color) !important;
