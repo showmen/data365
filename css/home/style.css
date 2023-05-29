@@ -430,7 +430,7 @@ body {
     /* border:1px solid #fff4a82e; */
 }
 .profile-info-left-container .bi-check-circle-fill{
-    color:var(--theme-fb-color);
+    color:greenyellow;
 }
 
 .profile-info-left-container h4{
