@@ -259,7 +259,7 @@ body {
 }
 
 .profile-icon{
-    font-size:110px;
+    font-size:110px !important;
 }
 
 .fb-color-btn{
@@ -305,6 +305,10 @@ body {
     backdrop-filter: blur(20px);
     border:1px solid #21242d;
     padding:5px;
+}
+
+.profile-preview-container .col-md-8{
+    padding-top:15px;
 }
 
 .profile-search-results{
@@ -392,24 +396,24 @@ body {
 }
 
 .cover-photo-container img{
-    max-height:25vh;
+    max-height:30vh;
     margin-bottom:10px;
     
     
 }
 
 .profile-picture-container{
-    margin-top:15vh;
+    margin-top:5vh;
 }
 .profile-picture-side-container{
     background-color:var(--theme-very-dark-transparant);
     color:white;
     backdrop-filter: blur(20px);
-    max-height:25vh;
+    max-height:30vh;
 }
 .profile-picture-side-container p{
     line-height: 1;
-    font-size:14px;
+    font-size:0.80em;
     margin-bottom:5px;
 }
 .profile-picture-container img{
@@ -440,7 +444,7 @@ body {
 .bi{
     font-size:14px;
     padding-right:4px;
-    padding-left:8px;
+    padding-left:4px;
 }
 
 

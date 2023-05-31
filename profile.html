@@ -29,7 +29,7 @@
             <div class="navbar-nav">
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             <a class="nav-link" href="postsearch.html">Post</a>
-            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link" href="profileDashboard.html">Profile</a>
             <a class="nav-link" href="#">Page</a>
             <a class="nav-link" href="#">Groups</a>
             <a class="nav-link" href="#">Auto Update Tasks</a>
@@ -38,19 +38,19 @@
         </div>
     </nav>
     <!---Contents-->
-    <div class="container transparent-container">
+    <div class="container-fluid transparent-container">
         <div class="row">
             <div class="col-md-12 cover-photo-container">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
-                        <div class="col-lg-7 profile-picture-container">
+                        <div class="col-md-6 profile-picture-container">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-4 profile-picture-left-side-container text-right">
+                                    <div class="col-3 col-md-4 profile-picture-left-side-container text-right">
                                         <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGUlMjBpbWFnZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid" alt="">
                                     </div>
-                                    <div class="col-6 profile-picture-side-container">
-                                        <p class="profile-name">Md. Tanvir Ahmed</p>
+                                    <div class="col-9 col-md-8 profile-picture-side-container">
+                                        <p class="profile-name pd-top-2">Md. Tanvir Ahmed</p>
                                         <p>From Sylhet</p>
                                         <p>Studied in Dhaka University, Bangladesh</p>
                                         <p>598 Friends</p>
@@ -336,7 +336,196 @@
               </div>
             </div>
             <div class="col-md-3">
-
+              <div class="container-fluid">
+                <div class="row">
+                    <p class="title-sm"><u> Add/Change Auto Update Settings</u></p>
+                </div>
+                <!-- Parameters row 1 -->
+                <div class="row pd-top-1">
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Load Feed Posts : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>     
+                </div>
+                  
+                <div class="row">
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Max Posts : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>     
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Auto Update Interval : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>     
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Auto Update Expire At: </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div> 
+                </div>
+                <div class="row"> 
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> From Date : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Load Reviews Posts  : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Load Mentions Posts : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <!-- Parameters row 2 -->
+                <div class="row">
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Load Video Posts : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Load Comments : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Max Comments: </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Load Replies : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Comments Type : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Load Reactors : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <!-- Parameters row 3 -->
+                <div class="row">
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Max Reactors : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Load Shares : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Max Shares : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Load Followers : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Max Followers : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Load Following : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <!-- Parameters row 4 -->
+                <div class="row">
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Max Following : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Upload Avatar To S3: </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Upload Cover Photo To S3 : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Page Screenshot : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Upload Posts Screenshots To S3 : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Analyze Demography : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Analyze Languages : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Callback Url : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <div class="row">  
+                  <div class="col-6">
+                    <p class=" title-ex-sm"><input type="checkbox" name=""> Profile ID : </p>
+                  </div>
+                  <div class="col-6"><input class="input-sm" type="text" name=""></div>  
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-12 text-center">
+                    <p class="title-sm"><button class="content-button status-button open"><i class="bi bi-cloud-arrow-down"></i> &nbsp;&nbsp;Collect Now</button></p>
+                  </div>
+                </div>
+                <div class="row">  
+                  <div class="col-12 text-center">
+                    <p class="title-sm"><button class="content-button status-button open"><i class="bi bi-arrow-clockwise"></i> &nbsp;&nbsp; Auto Update</button></p>
+                  </div>
+                  
+                </div>
+            </div>
             </div>
         </div>
         
@@ -1087,7 +1276,7 @@
                 </div>
                 <div class="row pd-top-2">
                   <p class="comment-text">জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে। জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
-                  <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" height="300px" alt="">
+                  <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"  alt="">
                   <div class="row pd-top-1">
                     <p>#Showmen #LifeIsGood #FreedomFighters</p>
                     <p class="text-center">
@@ -1221,7 +1410,7 @@
                 </div>
                 <div class="row pd-top-2">
                   <p class="comment-text">জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে। জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
-                  <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" height="300px" alt="">
+                  <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"  alt="">
                   <div class="row pd-top-1">
                     <p>#Showmen #LifeIsGood #FreedomFighters</p>
                     <p class="text-center">
@@ -1246,7 +1435,7 @@
                 </div>
                 <div class="row pd-top-2">
                   <p class="comment-text">জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে। জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
-                  <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" height="300px" alt="">
+                  <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"  alt="">
                   <div class="row pd-top-1">
                     <p>#Showmen #LifeIsGood #FreedomFighters</p>
                     <p class="text-center">
@@ -1271,7 +1460,7 @@
                 </div>
                 <div class="row pd-top-2">
                   <p class="comment-text">জীবের মধ্যে সবচেয়ে সম্পূর্ণতা মানুষের। কিন্তু সবচেয়ে অসম্পূর্ণ হয়ে সে জন্মগ্রহণ করে। বাঘ ভালুক তার জীবনযাত্রার পনেরো- আনা মূলধন নিয়ে আসে প্রকৃতির মালখানা থেকে। জীব রঙ্গভূমিতে মানুষ এসে দেখা দেয় দুই শূন্য হাতে মুঠো বেঁধে। মানুষ আসবার পূর্বেই জীবসৃষ্টিযজ্ঞে প্রকৃতির ভূরিব্যয়ের পালা শেষ হয়ে এসেছে।</p>
-                  <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" height="300px" alt="">
+                  <img src="https://images.unsplash.com/photo-1674574124345-02c525664b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"  alt="">
                   <div class="row pd-top-1">
                     <p>#Showmen #LifeIsGood #FreedomFighters</p>
                     <p class="text-center">
